@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-full-width {
+    width: 100%;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 200px;
+    background-color: yellow;
+}
+
+.jumbotron {
+    height: 500px;
+    background-color: red;
+}
+
+.jumbotron-left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2, p {
+    padding: 20px 0;
+}
+
+.lightblue {
+    margin: 50px auto;
+    height: 800px;
+    background-color: lightblue;
+}
+
+.cubo-testo, .top-card, .card-left, .card-center, .card-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.grid1 {
+    display: grid;
+    grid-template: 3fr 2fr 5fr / repeat(3 , 1fr);
+    grid-template-areas:
+                        'cu cu cu'
+                        'tc tc tc'
+                        'cl cc cr';
+    grid-column-gap: 30px;
+    grid-row-gap: 15px;
+}
+
+.cubo-testo {
+    grid-area: cu;
+    background-color: violet;
+}
+
+.top-card {
+    grid-area: tc;
+    background-color: tomato;
+}
+
+.card-left {
+    grid-area: cl;
+    background-color: cornsilk;
+}
+.card-center {
+    grid-area: cc;
+    background-color: skyblue;
+}
+.card-right {
+    grid-area: cr;
+    background-color: tan;
+}
+
+@media (max-width: 768px) {
+
+    .grid1 {
+        grid-template-rows: 3fr repeat(4 , 2fr);
+        grid-template-areas:
+                            'cu cu cu'
+                            'tc tc tc'
+                            'cl cl cl'
+                            'cc cc cc'
+                            'cr cr cr';
+        grid-column-gap: 30px;
+        grid-row-gap: 15px;
+    }
+
+}
